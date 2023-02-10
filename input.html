@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF=8">
+		<title>Input</title>
+	</head>
+
+	<body>
+		<form method="GET">
+			<table height="500" align="center">
+				<tr>
+					<td width="200">
+						Color: <input type="color" name="color">
+					</td>
+					<td>
+						Selecciona color de paleta. <br>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>
+						Fecha: <input type="date" name="fecha">
+					</td>
+					<td>
+						Muestra un calendario (Chrome) regresa fecha seleccionada. <br>
+					</td>
+
+				</tr>
+				<tr>
+					<td>
+						Hora: <input type="time" name="hora"> 
+					</td>
+					<td>
+						Meter hora en formato hh:mm. <br>
+					</td>
+
+				</tr>
+				<tr>
+					<td>
+						Mes: <input type="month" name="mes"> 
+					</td>
+					<td>
+						Muestra un calendario (Chrome) y devuelve mes y año de la fecha seleccionada. <br>
+					</td>
+
+				</tr>
+				<tr>
+					<td>
+						Edad: <input type="number" name="edad" min="18" max="30"> 
+					</td>
+					<td>
+						Define un campo numérico con restricciones si es necesario. <br>
+					</td>
+
+				</tr>
+				<tr>
+					<td>
+						Valor: <input type="range" name="points" min="0" max="10" oninput="this.nextElementSibling.value = this.value"> <output>5</output> 
+					</td>
+					<td>
+						Lo muestra como un slider. <br>
+					</td>
+
+				</tr>
+				<tr>
+					<td>
+						email: <input type="email" name="correo"> 
+					</td>
+					<td>
+						Cadena que contenga @. <br>
+					</td>
+
+				</tr>
+				<tr>
+					<td>
+						URL: <input type="url" name="direc"> 
+					</td>
+					<td>
+						Espera cadena http://www. <br>
+					</td>
+
+				</tr>
+				<tr>
+					<td>
+						Semana: <input type="week" name="semana"> 
+					</td>
+					<td>
+						Muestra un calendario (Chrome) y manda la semana y el año de la fecha seleccionada. <br>
+					</td>
+				</tr>
+			</table>
+			<p align="center">Comentario: <br><textarea name="comentario" rows="15" cols="50" placeholder="Escribe aquí..."></textarea><br><br><br><br>
+			<input type="submit" value="enviar" align="center"></p>	
+				
+			
+
+			
+		</form>
+	</body>
+</html>
