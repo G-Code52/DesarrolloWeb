@@ -1,0 +1,33 @@
+<html> <!-- bucles_anidados.html -->
+<head>
+	<meta charset="UTF=8">
+	<title>Bucles Anidados</title>
+
+</head>
+<body>
+	<table border="1" align="center" bordercolor="Olive" width="80%">
+		<SCRIPT>
+			for (i = 1; i <= 10; i++) {
+				if (i == 1) {
+					document.write("<tr>")
+				};
+				document.write("<td align='center'>")
+				document.write("<b>Tabla del " + i + ":</b><br>")
+				for (j = 1; j <= 10; j++) {
+					document.write(i + " x " + j + " = ")
+					document.write(i*j)
+					document.write("<br>")
+				};
+				document.write("</td>")
+				if (i == 5) {
+					document.write("</tr> <tr>")
+				};
+			};
+			document.write("</tr>")
+		</SCRIPT>
+	</table>
+
+
+	
+</body>
+</html>
