@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF=8">
+		<title>Formulario Valida</title>
+
+    <script type="text/javascript">
+
+      function valida_envia(){
+        // valido el nombre
+        if(document.formulario.nombre.value.length==0){
+          alert("Tiene que escribir su nombre")
+          document.formulario.nombre.focus()
+          return 0
+        }
+
+        if (document.formulario.edad.value==""){
+          alert("tiene que introducir un numero entero en su edad")
+          document.formulario.edad.focus()
+          return 0
+        }
+        else{
+          if (document.formulario.edad.value<18) {
+            alert("Debe ser mayor de 18 años")
+            document.formulario.edad.focus()
+            return 0
+          }
+        }
+
+        if (document.formulario.materia.selectedIndex==0) {
+          alert("Debe seleccionar un motivo de su contacto")
+          document.formulario.materia.focus()
+          return 0
+        }
+
+        //el formulario se envia
+        alert("Muchas gracias por enviar el formulario")
+        document.formulario.submit()
+
+      }
+
+    </script>
+      
+	</head>
+		
+	<body bgcolor="A9DFBF">
+		<form name="formulario">
+
+      <table width = "500">
+        <tr>
+          <td width= "30%">
+            Introduzca su nombre:
+          </td>
+          <td>
+            <input type="text" name="nombre" size="25">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Edad: 
+          </td>
+          <td>
+            <input type="text" name="edad" size="5">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Elija su Materia:
+          </td>
+          <td>
+            <select name="materia">
+            <option>Base de datos</option>
+            <option selected>Desarrollo Web</option>
+            <option>Inteligencia Artificial</option>
+            <option>Programacion Mobil</option>
+            </td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <input type="button" value="Enviar" onclick="valida_envia()">
+          </td>
+        </tr>
+      </table>
+
+    </form>
+	</body>
+</html>

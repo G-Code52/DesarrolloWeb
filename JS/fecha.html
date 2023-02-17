@@ -1,0 +1,43 @@
+<html> <!-- date.html -->
+<head>
+	<meta charset="UTF=8">
+	<title>Date</title>
+
+</head>
+<body>
+	<SCRIPT>
+
+	var f = new Date()
+	var d = f.getDate()
+	if (d < 10) {
+		d = "0" + d
+	};
+	var m = f.getMonth() + 1
+	if (m < 10) {
+		m = "0" + m
+	};
+	var y = f.getFullYear()
+
+	var h = f.getHours()
+	var min = f.getMinutes()
+	if (min < 10) {
+		min = "0" + min
+	};
+	var s = f.getSeconds()
+	if (s < 10) {
+		s = "0" + s
+	};
+
+	var fecha=d+"/"+m+"/"+y
+	var hora = h+":"+min+":"+s
+	document.write("Fecha del dia: " + fecha + "<br>")
+
+	document.write("Hora del dia: "+ hora)
+
+	</SCRIPT>
+
+
+
+	
+</body>
+</html>
