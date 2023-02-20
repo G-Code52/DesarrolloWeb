@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formulario</title>
+
+	<script type="text/javascript">
+		function valida_envia() {
+			if(document.fvalida.nombre.value.length==0){
+				alert("Tiene que escribir su nombre")
+				document.fvalida.nombre.focus()
+				return 0;
+			}
+			if(document.fvalida.edad.value==""){
+				alert("Tiene que escribir su edad")
+				document.fvalida.edad.focus()
+				return 0;
+			}
+			if(document.fvalida.edad.value<18){
+				alert("Debe ser mayor a 18 años")
+				document.fvalida.edad.focus()
+				return 0;
+			}
+			if(document.fvalida.materia.selectedIndex==0){
+				alert("Debe seleccionar su materia")
+				document.fvalida.edad.focus()
+				return 0;
+			}
+
+			alert("Formulario enviado")
+			document.fvalida.submit()
+		}
+
+	</script>
+</head>
+<body bgcolor="#21302E">
+	<font color="FFFFFF" size="5" face="Verdana">
+	<h3>Contrata un servicio:</h3>
+		<form>
+		  <table>
+		    <tr>
+		      <td>Nombre:</td>
+		      <td><input type="text" name="nombre" > <font color="red" size="2" face="Verdana">*</font></td>
+		    </tr>
+		    <tr>
+		      <td>Apellido paterno:</td>
+		      <td><input type="text" name="apellido_paterno" > <font color="red" size="2" face="Verdana">*</font></td>
+		    </tr>
+		    <tr>
+		      <td>Apellido materno:</td>
+		      <td><input type="text" name="apellido_materno" > <font color="red" size="2" face="Verdana">*</font></td>
+		    </tr>
+		    <tr>
+		      <td>Fecha de nacimiento:</td>
+		      <td><input type="date" name="fecha_nacimiento" > <font color="red" size="2" face="Verdana">*</font></td>
+		    </tr>
+		    <tr>
+		      <td>Correo electrónico:</td>
+		      <td><input type="email" name="correo" > <font color="red" size="2" face="Verdana">*</font></td>
+		    </tr>
+		    <tr>
+		      <td>Número de celular:</td>
+		      <td><input type="tel" name="celular" > <font color="red" size="2" face="Verdana">*</font></td>
+		    </tr>
+		    <tr>
+		      <td valign="top">Dirección:</td>
+		      <td><input type="text" name="direccion_calle" placeholder="Calle" > <font color="red" size="2" face="Verdana">*</font><br>
+		          <input type="text" name="direccion_num_ext" placeholder="Número exterior" > <font color="red" size="2" face="Verdana">*</font><br>
+		          <input type="text" name="direccion_num_int" placeholder="Número interior"><br>
+		          <input type="text" name="direccion_colonia" placeholder="Colonia" > <font color="red" size="2" face="Verdana">*</font><br>
+		          <input type="text" name="direccion_cp" placeholder="Código postal" > <font color="red" size="2" face="Verdana">*</font><br>
+		          <input type="text" name="direccion_municipio" placeholder="Municipio" > <font color="red" size="2" face="Verdana">*</font></td>
+		    </tr>
+		    <tr>
+		      <td>Ocupación:</td>
+		      <td><input type="text" name="ocupacion" > <font color="red" size="2" face="Verdana">*</font></td>
+		    </tr>
+		    <tr>
+		    	<td>
+		    		<input type="check_box" name="">
+		    		<select name="servicio">
+						<option>Nicho</option>
+						<option>Servicio de Prevención</option>
+						<option>Servicio de uso Inmediato</option>
+						<option>Cremación</option>
+					</select><br>
+		    	</td>
+		    	<td>
+		    		Servicios a elegir:
+		    	</td>
+		    	<td>
+		    		<input type="Checkbox" name="extra">Nicho
+					<input type="Checkbox" name="extra">Servicio de Prevención
+					<input type="Checkbox" name="extra">Servicio de uso Inmediato
+					<input type="Checkbox" name="extra">Cremación
+		    	</td>
+		    </tr>
+		  </table>
+		  <input type="button" value ="Enviar" onclick="valida_envia()">
+		</form>
+
+	</font>
+</body>
+</html>
