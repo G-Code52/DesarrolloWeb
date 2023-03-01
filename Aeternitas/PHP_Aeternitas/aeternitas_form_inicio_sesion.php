@@ -11,7 +11,8 @@
     echo "El trabajador es: $trabajador <br>";
     $password = $_GET['password_trabajador'];
     echo "Tu contraseña es: $password <br>";
-    echo "<a href='../aeternitas_info.html' target='Pantalla_principal'>Regresar</a>"
+    echo "<a href='../aeternitas_info.html' target='Pantalla_principal'>Regresar</a><br>";
+    echo "<a href='../aeternitas_menu_trabajador.html' target='Pantalla_principal'>Avanzar</a>";
 	?>
 	
 </body>

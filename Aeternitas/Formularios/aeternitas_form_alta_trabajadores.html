@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Formulario</title>
+	<title>Formulario Trabajadores</title>
 
 	<script type="text/javascript">
 		function valida_envia() {
@@ -52,17 +52,11 @@
 				document.fvalida.direccion_municipio.focus()
 				return 0;
 			}
-			if(document.fvalida.ocupacion.value.length==0){
-				alert("Debe ingresar su ocupación")
-				document.fvalida.ocupacion.focus()
+			if(document.fvalida.area.value.length==0){
+				alert("Debe ingresar su area")
+				document.fvalida.area.focus()
 				return 0;
 			}
-			if(!document.fvalida.servicio1.checked && !document.fvalida.servicio2.checked && !document.fvalida.servicio3.checked && !document.fvalida.servicio4.checked){
-				alert("Debe escoger al menos un servicio")
-				document.fvalida.servicio1.focus()
-				return 0;
-			}
-
 
 			alert("Formulario enviado")
 			document.fvalida.submit()
@@ -71,9 +65,9 @@
 	</script>
 </head>
 <body bgcolor="#21302E">
-	<font color="FFFFFF" size="5" face="Verdana">
-	<h3>Contrata un servicio:</h3>
-		<form name="fvalida">
+	<font color="#FFFFFF" size="5" face="Verdana">
+	<h3>Alta de trabajadores:</h3>
+		<form name="fvalida" ACTION="../PHP_aeternitas/aeternitas_alta_trabajadores.php">
 		  <table align="center">
 		    <tr>
 		      <td>Nombre:</td>
@@ -104,19 +98,17 @@
 		          <input type="text" name="direccion_municipio" placeholder="Municipio" > <font color="red" size="2" face="Verdana">*</font></td>
 		    </tr>
 		    <tr>
-		      <td>Ocupación:</td>
-		      <td><input type="text" name="ocupacion" > <font color="red" size="2" face="Verdana">*</font></td>
+		      <td>Area:</td>
+		      <td><input type="text" name="area" > <font color="red" size="2" face="Verdana">*</font></td>
 		    </tr>
 		    <tr>
 		    	<td valign="top">
-		    		Servicios a elegir:
+		    		Tipo de usuario:
 		    	</td>
 		    	<td>
 		    		<font size="3">
-			    		<input type="Checkbox" name="servicio1">Nicho <br>
-						<input type="Checkbox" name="servicio2">Servicio de Prevención <br>
-						<input type="Checkbox" name="servicio3">Servicio de uso Inmediato<br>
-						<input type="Checkbox" name="servicio4">Cremación<br>		    			
+			    		<input type="radio" name="r1" checked>Empleado		    			
+			    		<input type="radio" name="r1">Administrador		    			
 		    		</font>
 
 	
