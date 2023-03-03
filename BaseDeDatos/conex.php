@@ -1,6 +1,5 @@
-
-<?php 
-    function Conectarse()
+<?php
+function Conectarse()
     {
         if(! ($link = mysqli_connect("localhost", "gallegos", "mysql", "mau")))
         {
@@ -10,11 +9,5 @@
         return $link;
     }
 
-    $link = Conectarse();
-    echo "Conexión con la Base de Datos Conseguida <br>";
-    // Cierra la conexión
-
-
-    mysqli_close($link);            
-    
 ?>
+
