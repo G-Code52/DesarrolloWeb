@@ -5,7 +5,7 @@
             <?php
                 include("conex.php");
                 $link = Conectarse();
-                $result = mysqli_query($link, "Select * from usuario");      // php5
+                $result = mysqli_query($link, "Select * from usuario where dni = 1");      // php5
             ?>
             <table border = "1" cellspacing = "1" cellpadding = "1" align = "center">
                 <tr>
