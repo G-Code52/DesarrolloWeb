@@ -28,7 +28,7 @@
     		Colonia: #colonia , Codigo Postal: $CP <br>
     		Municipio: $municipio </font><br>";
     $area = $_GET['area'];
-    echo "<font color='#FFFFFF'>El area del trabajador es: $ocupacion </font><br>";
+    echo "<font color='#FFFFFF'>El area del trabajador es: $area </font><br>";
 
 
     echo "<a href='../aeternitas_info.html' target='Pantalla_principal'>Regresar</a>"

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Alta de Servicios</title>
+
+	<script type="text/javascript">
+	function valida_envia() {
+		if(document.fvalida.servicio.value.length==0){
+			alert("Tiene que escribir el nombre del servicio")
+			document.fvalida.servicio.focus()
+			return 0;
+		}
+		if(document.fvalida.precio_original.value.length==0){
+			alert("Tiene que escribir el precio original del servicio")
+			document.fvalida.precio_original.focus()
+			return 0;
+		}
+		if(isNaN(document.fvalida.precio_original.value)){
+			alert("El precio original debe ser un número")
+			document.fvalida.precio_original.focus()
+			return 0;
+		}
+		if(document.fvalida.descuento.value.length>0 && isNaN(document.fvalida.descuento.value)){
+			alert("El descuento debe ser un número")
+			document.fvalida.descuento.focus()
+			return 0;
+		}
+
+		alert("Formulario enviado")
+		document.fvalida.submit()
+	}
+
+</script>
+</head>
+<body bgcolor="#21302E">
+	<font color="FFFFFF" size="5" face="Verdana">
+	<h3>Alta de servicios:</h3>
+		<form name="fvalida" action="../PHP_aeternitas/aeternitas_alta_servicios.php">
+		  <table align="center">
+		    <tr>
+		      <td>Nombre del servicio:</td>
+		      <td><input type="text" name="servicio" > <font color="red" size="2" face="Verdana">*</font></td>
+		    </tr>
+		    <tr>
+		      <td>Precio original:</td>
+		      <td><input type="text" name="precio_original" > <font color="red" size="2" face="Verdana">*</font></td>
+		    </tr>
+		    <tr>
+		      <td>Descuento:</td>
+		      <td><input type="text" name="descuento" > </td>
+		    </tr>
+		  </table>
+		  <br>
+		  <div align="center"><input type="button" value="Enviar" onclick="valida_envia()" /></div>
+		</form>
+	</font>
+</body>
+</html>
