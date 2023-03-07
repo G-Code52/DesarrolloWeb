@@ -33,10 +33,12 @@
 <body bgcolor="#21302E">
 	<font color="FFFFFF" size="5" face="Verdana">
 	<h3>Contrata un servicio:</h3>
+	</font>
+	<font color="FFFFFF" size="4" face="Verdana">
 		<form name="fvalida" action="../PHP_Aeternitas/aeternitas_alta_contrato.php">
 		  <table align="center">
 		    <tr>
-		      <td>ID Cliente:</td>
+		      <td>ID Cliente:</td> <!--Poner lista de seleccion-->
 		      <td><input type="text" name="ID" > <font color="red" size="2" face="Verdana">*</font></td>
 		    </tr>
 		    <tr>
@@ -50,12 +52,10 @@
 		    		Servicios a elegir:
 		    	</td>
 		    	<td>
-		    		<font size="3">
 			    		<input type="Checkbox" name="servicio1">Nicho <br>
 						<input type="Checkbox" name="servicio2">Servicio de Prevención <br>
 						<input type="Checkbox" name="servicio3">Servicio de uso Inmediato<br>
 						<input type="Checkbox" name="servicio4">Cremación<br>		    			
-		    		</font>
 		    	</td>
 		    </tr>
 		    <tr>
@@ -63,10 +63,8 @@
 		    		Servicios adicionales:
 		    	</td>
 		    	<td>
-		    		<font size="3">
 			    		<input type="Checkbox" name="servicioa1">Flores <br>
-						<input type="Checkbox" name="servicioa2">Globos <br>	    			
-		    		</font>
+						<input type="Checkbox" name="servicioa2">Globos <br>
 		    	</td>
 		    </tr>
 		    <tr>
