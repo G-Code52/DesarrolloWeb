@@ -11,7 +11,7 @@
         // valido el nombre
         if(document.form_inicioSesion.id_trabajador.value.length==0){
           alert("Tiene que escribir su ID de Trabajador")
-          document.formulario.id_trabajador.focus()
+          document.form_inicioSesion.id_trabajador.focus()
           return 0
         }
 
@@ -23,7 +23,7 @@
 
         //el formulario se envia
         alert("Muchas gracias por enviar el formulario")
-        document.formulario.submit()
+        document.form_inicioSesion.submit()
       }
 
     </script>
@@ -70,7 +70,7 @@
 							</tr>
 							<tr>
 								<td colspan="2">
-									<input type="submit" value="Enviar" onclick="valida_envia()">
+									<input type="button" value="Enviar" onclick="valida_envia()">
 								</td>
 							</tr>
 

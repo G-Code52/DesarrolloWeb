@@ -6,6 +6,8 @@
 	<title>Inicio de Comprobación</title>
 </head>
 <body bgcolor="#21302E">
+<font color="FFFFFF" size="5" face="Verdana">
+
 	<?php
 
     $nombre = $_GET['nombre'];
@@ -34,6 +36,6 @@
     echo "<a href='../aeternitas_menu_trabajador.html' target='Pantalla_principal'>Regresar</a>"
 
 	?>
-	
+</font>
 </body>
 </html>

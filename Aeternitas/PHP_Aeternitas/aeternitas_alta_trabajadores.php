@@ -6,6 +6,8 @@
 	<title>Inicio de Comprobación</title>
 </head>
 <body bgcolor="#21302E">
+<font color="FFFFFF" size="5" face="Verdana">
+
 	<?php
 
     $nombre = $_GET['nombre'];
@@ -25,7 +27,7 @@
     $municipio = $_GET['direccion_municipio'];
     echo "<font color='#FFFFFF'>La direccion del tabajador es: <br> 
     		Calle: $calle , Numero Interior: $num_int <br>
-    		Colonia: #colonia , Codigo Postal: $CP <br>
+    		Colonia: $colonia , Codigo Postal: $CP <br>
     		Municipio: $municipio </font><br>";
     $area = $_GET['area'];
     echo "<font color='#FFFFFF'>El area del trabajador es: $area </font><br>";
@@ -34,6 +36,6 @@
     echo "<a href='../aeternitas_info.html' target='Pantalla_principal'>Regresar</a>"
 
 	?>
-	
+</font>
 </body>
 </html>

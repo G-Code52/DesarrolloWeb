@@ -57,13 +57,7 @@
 				document.fvalida.ocupacion.focus()
 				return 0;
 			}
-			if(!document.fvalida.servicio1.checked && !document.fvalida.servicio2.checked && !document.fvalida.servicio3.checked && !document.fvalida.servicio4.checked){
-				alert("Debe escoger al menos un servicio")
-				document.fvalida.servicio1.focus()
-				return 0;
-			}
-
-
+			
 			alert("Formulario enviado")
 			document.fvalida.submit()
 		}
@@ -75,7 +69,7 @@
 		<h3>Alta Cliente:</h3>
 		</font>
 		<font color="FFFFFF" size="4" face="Verdana">
-		<form name="fvalida" ACTION="../PHP_aeternitas/aeternitas_alta_cliente.php">
+		<form name="fvalida" ACTION="../PHP_aeternitas/at_insert_clientes.php" method="POST">
 		  <table align="center">
 		    <tr>
 		      <td>Nombre:</td>
@@ -108,17 +102,6 @@
 		    <tr>
 		      <td>Ocupación:</td>
 		      <td><input type="text" name="ocupacion" > <font color="red" size="2" face="Verdana">*</font></td>
-		    </tr>
-		    <tr>
-		    	<td valign="top">
-		    		Servicios a elegir:
-		    	</td>
-		    	<td>
-			    		<input type="Checkbox" name="servicio1">Nicho <br>
-						<input type="Checkbox" name="servicio2">Servicio de Prevención <br>
-						<input type="Checkbox" name="servicio3">Servicio de uso Inmediato<br>
-						<input type="Checkbox" name="servicio4">Cremación<br>		    			
-		    	</td>
 		    </tr>
 		    <tr>
 		    	<td align="right" colspan="2">

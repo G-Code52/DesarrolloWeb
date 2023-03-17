@@ -6,6 +6,8 @@
 	<title>Comprobación Alta de Proveedores</title>
 </head>
 <body bgcolor="#21302E">
+<font color="FFFFFF" size="5" face="Verdana">
+
 	<?php
 
     $insumo = $_GET['tipo_insumo'];
@@ -29,6 +31,6 @@
     echo "<a href='../aeternitas_info.html' target='Pantalla_principal'>Regresar</a><br>";
     echo "<a href='../aeternitas_menu_trabajador.html' target='Pantalla_principal'>Avanzar</a>";
 	?>
-	
+</font>	
 </body>
 </html>
