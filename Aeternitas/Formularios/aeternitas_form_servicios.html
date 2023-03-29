@@ -4,59 +4,104 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Alta de Servicios</title>
+	<link rel="stylesheet" href="CSS/fontawesome/css/all.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
 
 	<script type="text/javascript">
 	function valida_envia() {
-		if(document.fvalida.servicio.value.length==0){
-			alert("Tiene que escribir el nombre del servicio")
-			document.fvalida.servicio.focus()
+		if(document.fvalida.fechauso.value.length==0){
+			alert("Tiene que escribir la fecha de uso")
+			document.fvalida.fechauso.focus()
 			return 0;
 		}
-		if(document.fvalida.precio_original.value.length==0){
-			alert("Tiene que escribir el precio original del servicio")
-			document.fvalida.precio_original.focus()
+		if(document.fvalida.folioactadefuncion.value.length==0){
+			alert("Tiene que escribir el folio de acta de defunción")
+			document.fvalida.folioactadefuncion.focus()
 			return 0;
 		}
-		if(isNaN(document.fvalida.precio_original.value)){
-			alert("El precio original debe ser un número")
-			document.fvalida.precio_original.focus()
+		if(document.fvalida.foliocertificadomedico.value.length==0){
+			alert("Tiene que escribir el certificado médico")
+			document.fvalida.foliocertificadomedico.focus()
 			return 0;
 		}
-		if(document.fvalida.descuento.value.length>0 && isNaN(document.fvalida.descuento.value)){
-			alert("El descuento debe ser un número")
-			document.fvalida.descuento.focus()
+		if(document.fvalida.at_svo_id.value.length==0){
+			alert("Tiene que escribir el id del servicio")
+			document.fvalida.at_svo_id.focus()
 			return 0;
 		}
+		if(document.fvalida.at_cto_id.value.length==0){
+			alert("Tiene que escribir el id del contrato")
+			document.fvalida.at_cto_id.focus()
+			return 0;
+		}
+		if(document.fvalida.at_cto_epo_id.value.length==0){
+			alert("Tiene que escribir el ID de empleado de Contrato")
+			document.fvalida.at_cto_epo_id.focus()
+			return 0;
+		}
+		
 
 		alert("Formulario enviado")
 		document.fvalida.submit()
 	}
-
 </script>
+
+<style>
+	label {
+	  font-family: Verdana;
+	  font-size: 24px;
+	  color: white;
+	}
+	
+	body {
+		background-color: #21302E !important;
+	}
+	
+	h1 {
+		background-color: #21302E;
+		font-family: Verdana, san-serif;
+		color: white m !important;
+	}
+</style>
 </head>
 <body bgcolor="#21302E">
 	<font color="FFFFFF" size="5" face="Verdana">
 		<h3>Alta de Servicios:</h3>
-		</font>
-		<font color="FFFFFF" size="4" face="Verdana">
-		<form name="fvalida" action="../PHP_aeternitas/aeternitas_alta_servicios.php">
-		  <table align="center">
-		    <tr>
-		      <td>Nombre del servicio:</td>
-		      <td><input type="text" name="servicio" > <font color="red" size="2" face="Verdana">*</font></td>
-		    </tr>
-		    <tr>
-		      <td>Precio original:</td>
-		      <td><input type="text" name="precio_original" > <font color="red" size="2" face="Verdana">*</font></td>
-		    </tr>
-		    <tr>
-		      <td>Descuento:</td>
-		      <td><input type="text" name="descuento" > </td>
-		    </tr>
-		  </table>
-		  <br>
-		  <div align="center"><input type="button" value="Enviar" onclick="valida_envia()" /></div>
-		</form>
 	</font>
+	<form name="fvalida" method="POST" action="../PHP_Aeternitas/aeternitas_alta_servicios.php">
+		<table class="table table-striped" style="background-color: #21302E; border-color: #21302E;">
+			<tr>
+				<td><label for="fechauso">Fecha de Uso:</label></td>
+				<td><input type="date" id="fechauso" name="fechauso" class="form-control" required></td>
+			</tr>
+			<tr>
+				<td><label for="folioactadefuncion">Folio de Acta de Defunción:</label></td>
+				<td><input type="text" id="folioactadefuncion" name="folioactadefuncion" class="form-control" maxlength="20" required></td>
+			</tr>
+			<tr>
+				<td><label for="foliocertificadomedico">Folio de Certificado Médico:</label></td>
+				<td><input type="text" id="foliocertificadomedico" name="foliocertificadomedico" class="form-control" maxlength="20" required></td>
+			</tr>
+			<tr>
+				<td><label for="at_svo_id">ID de Servicio:</label></td>
+				<td><input type="number" id="at_svo_id" name="at_svo_id" class="form-control" required></td>
+			</tr>
+			<tr>
+				<td><label for="at_cto_id">ID de Contrato:</label></td>
+				<td><input type="number" id="at_cto_id" name="at_cto_id" class="form-control" required></td>
+			</tr>
+			<tr>
+				<td><label for="at_cto_epo_id">ID de empleado de Contrato:</label></td>
+				<td><input type="number" id="at_cto_epo_id" name="at_cto_epo_id" class="form-control" required></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right">
+					<input type="submit" class="btn btn-primary" onclick="valida_envia()" value="Enviar">
+				</td>
+			</tr>
+		</table>
+	</form>
 </body>
 </html>

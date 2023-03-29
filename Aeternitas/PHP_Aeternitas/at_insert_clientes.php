@@ -28,8 +28,8 @@
             $ocupacion = $_POST['ocupacion'];
 
             mysqli_query($link, "insert into cliente 
-                at_clientes values ('$id','$nombre', '$apellido', 
-                '$fecha_nacimiento', '$correo')")
+                at_clientes values ('$nombre', '$apellido', 
+                '$fecha_nacimiento', '$correo')");
 
 
 

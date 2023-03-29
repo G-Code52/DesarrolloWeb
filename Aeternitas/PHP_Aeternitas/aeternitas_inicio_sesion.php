@@ -1,3 +1,6 @@
+<?php 
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,13 +12,13 @@
 <font color="FFFFFF" size="5" face="Verdana">
 
 	<?php
-    $trabajador = $_GET['id_trabajador'];
+    $trabajador = $_SESSION['id_trabajador'];
     echo "El trabajador es: $trabajador <br>";
-    $password = $_GET['password_trabajador'];
+    $password = $_SESSION['password'];
     echo "Tu contraseña es: $password <br>";
-    echo "<a href='../aeternitas_info.html' target='Pantalla_principal'>Regresar</a><br>";
-    echo "<a href='../aeternitas_int_trabajador.html' target='Pantalla_Principal'>Avanzar</a>";
+    echo "<a href='../aeternitas_int_trabajador.html' target='parent'>Avanzar</a>";
 	?>
+
 </font>
 </body>
 </html>

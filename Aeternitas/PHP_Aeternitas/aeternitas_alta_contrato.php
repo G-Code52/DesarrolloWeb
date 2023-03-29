@@ -10,9 +10,9 @@
 
 	<?php
 
-    $id = $_GET['ID'];
+    $id = $_POST['at_cte_id'];
     echo "<font color='#FFFFFF'>El id del cliente es: $id <br>";
-    $fecha = $_GET['fecha'];
+    $fecha = $_POST['fechafirma'];
     echo "La fecha del contrato es: $fecha<br>";
     
     echo "<a href='../aeternitas_info.html' target='Pantalla_principal'>Regresar</a><br>";

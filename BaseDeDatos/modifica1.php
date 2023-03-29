@@ -9,7 +9,7 @@
 			if(!isset($_GET['id']))
 				$var = 1;
 			else
-				$var = $_GET['id']
+				$var = $_GET['id'];
 			$result = mysqli_query($link, "Select * from usuaio where id ='$var'");
 			$row = mysqli_fetch_array($result);
 			echo "

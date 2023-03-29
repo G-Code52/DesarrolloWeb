@@ -10,23 +10,15 @@
 
 	<?php
 
-    $insumo = $_GET['tipo_insumo'];
+    $insumo = $_POST['tipoinsumo'];
     echo "<font color='#FFFFFF'>El tipo de insumo es: $insumo <br>";
-    $nombre_empresa = $_GET['nombre_empresa'];
+    $nombre_empresa = $_POST['nombreempresa'];
     echo "El nombre de la empresa es: $nombre_empresa<br>";
-    $telefono = $_GET['telefono'];
+    $telefono = $_POST['telefono'];
     echo "El telefono de la empresa es: $telefono<br>";
-    $calle = $_GET['direccion_calle'];
-    $num_int = $_GET['direccion_num_int'];
-    $colonia = $_GET['direccion_colonia'];
-    $CP = $_GET['direccion_cp'];
-    $municipio = $_GET['direccion_municipio'];
+    $direccion = $_POST['direccion'];
     echo "La direccion de la empresa es la siguiente: <br>
-        La calle es: $calle <br>
-        El numero interior es: $num_int <br>
-        La colonia es: $colonia <br>
-        El codigo postal es: $CP <br>
-        El municipio es: $municipio <br></font>";
+        $direccion<br></font>";
 
     echo "<a href='../aeternitas_info.html' target='Pantalla_principal'>Regresar</a><br>";
     echo "<a href='../aeternitas_menu_trabajador.html' target='Pantalla_principal'>Avanzar</a>";
