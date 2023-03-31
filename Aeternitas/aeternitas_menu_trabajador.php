@@ -46,21 +46,21 @@
 				<a href="Formularios/aeternitas_form_contrato.php"><input type="button" name="nuevo_contrato" value="Nuevo Contrato"></a>
 			</td>
 			<td align="center" width="20%">
-				<a href="Formularios/aeternitas_form_alta_clientes.html"><input type="button" name="alta_cliente" value="Alta Cliente"></a>
+				<a href="Formularios/aeternitas_form_alta_clientes.php"><input type="button" name="alta_cliente" value="Alta Cliente"></a>
 			</td>
 			<td align="center" width="20%">
 				<a href="Formularios/aeternitas_form_alta_trabajadores.php"><input type="button" name="alta_trabajadores" value="Alta Trabajadores"></a>
 			</td>
 			<td align="center" width="20%">
-				<a href="Formularios/aeternitas_form_proveedores.html"><input type="button" name="alta_trabajadores" value="Alta Proveedores"></a>
+				<a href="Formularios/aeternitas_form_proveedores.php"><input type="button" name="alta_trabajadores" value="Alta Proveedores"></a>
 			</td>
 			<td align="center" width="20%">
-				<a href="Formularios/aeternitas_form_servicios.html"><input type="button" name="alta_trabajadores" value="Alta Servicios"></a>
+				<a href="Formularios/aeternitas_form_servicios.php"><input type="button" name="alta_trabajadores" value="Alta Servicios"></a>
 			</td>
 		</tr>
 	</table>
 	<br>
 	<br>
-	<p align="center"><a href='aeternitas.html' target='Menu_Principal'>Cerrar Sesión</a></p>
+	<p align="center"><a href='index.html' target="_parent">Cerrar Sesión</a></p>
 </body>
 </html>

@@ -24,7 +24,7 @@
         $_SESSION['autenticado']="SI";
         $_SESSION['id_trabajador']=$u;
         $_SESSION['password']=$p;
-        header("Location: aeternitas_inicio_sesion.php");
+        header("Location: ../aeternitas_menu_trabajador.php");
 
     }
     else{

@@ -1,25 +1,31 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Comprobación Alta de Servicios</title>
-</head>
-<body bgcolor="#21302E">
-<font color="FFFFFF" size="5" face="Verdana">
+<?php
+    include ("conex.php");
+    $link = Conectarse();
+    $servicio = $_POST['tiposervicio'];
+    $preciooriginal = $_POST['preciooriginal'];
+    $descuento = $_POST['descuento'];
+    $nombre = $_POST['nombrearchivo'];
+    $target_path = '../Imagenes/Servicios/';
+    $archivo = $_FILES['archivo']['name'];
+    $target_path = $target_path.basename($_FILES['archivo']['name']);
 
-	<?php
 
-    $servicio = $_GET['servicio'];
-    echo "<font color='#FFFFFF'>El nombre del servicio es: $servicio <br>";
-    $precio = $_GET['precio_original'];
-    echo "El precio original es de: $$precio<br>";
-    $descuento = $_GET['descuento'];
-    echo "El descuento es de: $descuento%</font><br>";
+    //Comprobar si la conexión fue exitosa
+    if (!$link) {
+        die('Error de conexión: ' . mysqli_connect_error());
+    }
 
-    echo "<a href='../aeternitas_info.html' target='Pantalla_principal'>Regresar</a><br>";
-    echo "<a href='../aeternitas_menu_trabajador.html' target='Pantalla_principal'>Avanzar</a>";
-	?>
-</font>	
-</body>
-</html>
+    //Ejecutar la consulta mysqli INSERT
+    if (mysqli_query($link, $sql)&&move_uploaded_file($_FILES['archivo']['tmp_name'], $target_path)) {
+        $sql = "INSERT INTO at_servicios (tipo, preciooriginal, descuento, imagen, nombrearchivo) VALUES ('$servicio', '$preciooriginal', '$descuento', '$imagen', '$nombre)";
+        mysqli_query($link, $sql) or die (mysqli_error());
+        echo "Datos insertados correctamente.";
+
+        header ("Location: ../aeternitas_menu_trabajador.php");
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($link);
+    }
+
+    //Cerrar la conexión a la base de datos
+    mysqli_close($link);
+?>

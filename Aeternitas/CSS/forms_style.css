@@ -1,0 +1,97 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+div#general{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 100vh;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+#form_alta{
+    background-color: #55A092;
+    flex-direction: column; /* muestra los elementos en una columna */
+    text-align: center;
+    max-width: 90%;
+    max-height: 80vh; /* altura máxima del div */
+    overflow: auto; /* agregar una barra de desplazamiento */
+
+}
+
+
+
+#form_inicio {
+    color:black;
+    background-color: #55A092;
+    display: flex;
+    flex-direction: column; /* muestra los elementos en una columna */
+    justify-content: center;
+    align-items: center;
+    margin: 10vh auto 0;
+    text-align: center;
+    width: 50%;
+    height: auto;
+}
+
+#tabla_forms {
+    border-collapse: collapse;
+    margin: auto;
+    width: 100%;
+}
+  
+#tabla_forms td, #tabla_forms th {
+    padding: 10px;
+    border-radius: 10px;
+}
+  
+  
+#tabla_iniciosesion {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    margin: auto;
+}
+  
+#tabla_iniciosesion td, #tabla_iniciosesion th {
+    padding: 10px;
+    border-radius: 10px;
+}
+  
+#logo {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    display: block;
+    margin: 5vh auto;
+    background: linear-gradient(45deg, #55A092, #55a09298);
+}
+  
+input#enviar {
+    background-color: #E2B66B;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px; /* para hacer los bordes circulares, ajuste el valor según su preferencia */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    width: 100px;
+}
+
+input#submit{
+    color:#E2B66B;
+    cursor: pointer;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    width: 100px;
+}
+
+
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FFFFFF !important;
+    background-color: #21302E;
+    margin-top: 20px; /* agregar un margen superior */
+}
