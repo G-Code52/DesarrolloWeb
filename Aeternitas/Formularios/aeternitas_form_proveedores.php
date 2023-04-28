@@ -1,3 +1,6 @@
+<?php
+	include("../PHP_Aeternitas/security.php")
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,7 +60,7 @@
 	<div id="general">
 		<div id="form_alta">
 			<h1>Alta de Proveedor:</h1>
-			<form name="fvalida" method="POST" action="../PHP_Aeternitas/aeternitas_alta_contrato.php">
+			<form name="fvalida" method="POST" action="../PHP_Aeternitas/aeternitas_alta_proveedores.php">
 				<table id="tabla_forms">
 				<tr>
 					<td><label for="tipoinsumo"><font color="red" size="5" face="Verdana">*</font>Tipo de Insumo:</label></td>

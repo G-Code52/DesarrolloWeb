@@ -42,6 +42,24 @@ div#lista{
 
 }
 
+div#infoGeneral{
+    margin: 10vh auto 0;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0 0 2 rgba(0, 0, 0, 0.7); 
+    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 2px solid grey;
+    width:300px;
+    height: 400px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+
+}
+
 h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: large;
@@ -63,4 +81,10 @@ p {
     text-align: left; 
 }
   
-
+div#carousel{
+    width:100%;
+    height: 100vh;
+    background-color: #55A092 !important;
+    box-sizing: border-box;
+    box-shadow: inset 4px 4px -2px rgba(0, 0, 0, 0.3);
+}

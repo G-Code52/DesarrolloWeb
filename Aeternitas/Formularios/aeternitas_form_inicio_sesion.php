@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +29,6 @@
 
 		// Cambiar la URL del frame
 		// miFrame.location.href = "../aeternitas_menu_numtrabajador.html";
-        alert("Muchas gracias por enviar el formulario")
         document.form_inicioSesion.submit()
       }
 
@@ -46,7 +46,7 @@
 		<img id="logo" src="../Imagenes/Logo.jpg" alt="Logo">
 		</div>
 	  <table width="100%" align="center" height="100%" id="tabla_iniciosesion">
-			<form ACTION="../PHP_Aeternitas/control.php" class="table table-striped" METHOD="POST" name="form_inicioSesion">
+			<form ACTION="../PHP_Aeternitas/control.php" target="_blank" class="table table-striped" METHOD="POST" name="form_inicioSesion">
 				<tr align="left">
 					<td><font size="3" face="Verdana">ID Trabajador:</font></td>
 					<td><select name="id_trabajador" class="form-control" required> 

@@ -1,3 +1,6 @@
+<?php
+		include("../PHP_Aeternitas/security.php")
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -88,7 +91,9 @@
 					</tr>
 					<tr>
 						<td colspan="2"><a href="../aeternitas_menu_trabajador.php"><input id="submit" type="button" class="btn btn-primary" value="Atrás"></a></td>
-						<td colspan="2"><input id="submit" type="submit" class="btn btn-primary" onclick="valida_envia()" value="Enviar"></td>
+						<td colspan="2">
+						<input id="submit" type="submit" class="btn btn-primary" onclick="valida_envia()" value="Enviar">
+					</td>
 					</tr>
 				</table>
 			</form>

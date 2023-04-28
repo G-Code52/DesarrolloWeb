@@ -1,3 +1,6 @@
+<?php
+	include("../PHP_Aeternitas/security.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,26 +8,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Formulario Trabajadores</title>
 
-	<style>
-		label {
-		  font-family: Verdana;
-		  font-size: 24px;
-		  color: white;
-		}
-		
-		body {
-			background-color: #21302E !important;
-		}
-		
-		h1 {
-			background-color: #21302E;
-			font-family: Verdana, san-serif;
-			color: white m !important;
-		}
-	</style>
-
 	<script type="text/javascript">
 		function valida_envia() {
+			
 			if(document.fvalida.nombre.value.length==0){
 				alert("Tiene que escribir su nombre")
 				document.fvalida.nombre.focus()
@@ -89,36 +75,34 @@
 				alert("Debe ingresar su contraseña")
 				document.fvalida.password.focus()
 				return 0;
-			}
-
-			alert("Formulario enviado")
-			document.fvalida.submit()
+			} 
+			document.fvalida.submit();
 		}
 
 	</script>
-	<link rel="stylesheet" href="CSS/fontawesome/css/all.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/forms_style.css">
+	<link rel="stylesheet" href="../CSS/fontawesome/css/all.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </head>
-<body bgcolor="#21302E">
-	<font color="FFFFFF" size="5" face="Verdana">
-		<h3>Alta de Trabajadores:</h3>
-		</font>
+<body>
+
+	<div id="general">
+		<div id="form_alta">
+			<h1>Alta de Trabajadores:</h1>
 		<form name="fvalida" method="POST" action="../PHP_Aeternitas/aeternitas_alta_trabajadores.php">
-			<table class="table table-striped" style="background-color: #21302E; border-color: #21302E;">
+			<table id="tabla_forms">
 				<tr>
 					<td><label for="nombre"><font color="red" size="5" face="Verdana">*</font>Nombre:</label></td>
 					<td><input type="text" id="nombre" name="nombre" class="form-control" required></td>
-				</tr>
-				<tr>
+
 					<td><label for="apellido"><font color="red" size="5" face="Verdana">*</font>Apellidos:</label></td>
 					<td><input type="text" id="apellido" name="apellido" class="form-control" required></td>
 				</tr>
 				<tr>
 					<td><label for="curp"><font color="red" size="5" face="Verdana">*</font>CURP:</label></td>
 					<td><input type="text" id="curp" name="curp" class="form-control" required></td>
-				</tr>
-				<tr>
+
 					<td valign="top"><label for="direccion_calle"><font color="red" size="5" face="Verdana">*</font>Dirección:</label></td>
 					<td>
 						<input type="text" id="calle" name="calle" class="form-control" placeholder="Calle" required><br>
@@ -131,24 +115,21 @@
 				<tr>
 					<td><label for="telefono"><font color="red" size="5" face="Verdana">*</font>Teléfono:</label></td>
 					<td><input type="tel" id="telefono" name="telefono" class="form-control" required></td>
-				</tr>
-				<tr>
+
 					<td><label for="correo"><font color="red" size="5" face="Verdana">*</font>Correo electrónico:</label></td>
 					<td><input type="email" id="correo" name="correo" class="form-control" required></td>
 				</tr>
 				<tr>
 					<td><label for="tituloacademico">Título académico:</label></td>
 					<td><input type="text" id="tituloacademico" name="tituloacademico" class="form-control" placeholder="Título académico (opcional)"></td>
-				</tr>
-				<tr>
+
 					<td><label for="area"><font color="red" size="5" face="Verdana">*</font>Área:</label></td>
 					<td><input type="text" id="area" name="area" class="form-control" required></td>
 				</tr>
 				<tr>
 					<td><label for="comision">Comisión:</label></td>
 					<td><input type="number" id="comision" name="comision" class="form-control" placeholder="Comisión (opcional)"></td>
-				</tr>
-				<tr>
+
 					<td><label for="fechacontratacion"><font color="red" size="5" face="Verdana">*</font>Fecha de contratación:</label></td>
 					<td><input type="date" id="fechacontratacion" name="fechacontratacion" class="form-control" placeholder="Fecha de contratación (opcional)"></td>
 				</tr>
@@ -163,17 +144,18 @@
 							{echo '<option>'.$row['id'];}
 					?>
 					</td>
-				</tr>
-				<tr>
+
 					<td><label for="password">Contraseña Trabajador:</label></td>
 					<td><input type="text" id="password" name="password" class="form-control"></td>
 				</tr>
 				<tr>
-					<td colspan="2" align="right">
-					  <input type="submit" class="btn btn-primary" value="Enviar" onclick="valida_envia()">
+					<td colspan="2"><a href="../aeternitas_menu_trabajador.php"><input id="atras" type="button" class="btn btn-primary" value="Atrás"></a></td>
+					<td colspan="2">
+						<input name="btnSubmit" type="button" class="btn btn-primary" onclick="valida_envia()" value="Enviar">
 					</td>
-				</tr>
 				</table>
 			</form>
+		</div>
+	</div>
 </body>
 </html>

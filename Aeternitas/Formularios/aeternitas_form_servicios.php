@@ -1,3 +1,6 @@
+<?php
+	include("../PHP_Aeternitas/security.php")
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,12 +56,25 @@
 	<div id="general">
 		<div id="form_alta">
 			<h1>Alta de Servicio:</h1>
-			<form name="fvalida" method="POST" action="../PHP_Aeternitas/aeternitas_alta_servicios.php">
-				<table class="table table-striped" id="tabla_iniciosesion">
+			<form name="fvalida" method="POST" action="../PHP_Aeternitas/aeternitas_alta_servicios.php" enctype="multipart/form-data">
+				<table class="table table-striped" id="tabla_iniciosesion" >
 					<tr>
-						<td colspan="2"><label for="tiposervicio">Tipo de Servicio:</label></td>
-						<td colspan="2"><input type="text" id="tiposervicio" name="tiposervicio" class="form-control" maxlength="20" required></td>
-						</tr>
+						<td><label for="tiposervicio">Tipo de Servicio:</label></td>
+						<td>
+							<select id="tiposervicio" name="tiposervicio" class="form-control" required>
+							<option value="Nicho">Nicho</option>
+							<option value="Velacion">Velacion</option>
+							<option value="Cremacion">Cremacion</option>
+							</select>
+						</td>
+						<td><label for="nombre">Nombre:</label></td>
+						<td><input type="text" id="nombre" name="nombre" class="form-control" maxlength="50" required></td>
+					</tr>
+
+					<tr>
+						<td><label for="descripcion">Descripcion:</label></td>
+						<td colspan="3"><input type="text" id="descripcion" name="descripcion" class="form-control"></td>
+					</tr>
 					<tr>
 						<td><label for="preciooriginal">Precio Original:</label></td>
 						<td><input type="text" id="preciooriginal" name="preciooriginal" class="form-control" maxlength="20" required></td>
@@ -69,12 +85,18 @@
 						<td><label for="nombrearchivo">Nombre Archivo:</label></td>
 						<td ><input type="text" id="nombrearchivo" name="nombrearchivo" class="form-control"></td>
 						<td><label for="archivo">Imagen:</label></td>
-						<td ><input type="file" id="archivo" name="archivo" class="form-control"></td>
+						<td ><input type="file" id="archivo" name="archivo" class="form-control" size="25" maxlength="70"></td>
 					</tr>
 					<tr>
-						<td colspan="2"><a href="../aeternitas_menu_trabajador.php"><input id="submit" type="button" class="btn btn-primary" value="Atrás"></a></td>
-						<td colspan="2"><input type="submit" class="btn btn-primary" onclick="valida_envia()" value="Enviar" id="submit"></td>
+						<td><label for="nombre">Nombre del servicio:</label></td>
+						<td colspan="3"><input type="text" id="nombre" name="nombre" class="form-control"></td>
 					</tr>
+					<tr>
+						<td colspan="2"><a href="../aeternitas_menu_trabajador.php"><input type="button" class="btn btn-primary" value="Atrás"></a></td>
+						<td colspan="2">
+						<input id="submit" type="submit" class="btn btn-primary" onclick="valida_envia()" value="Enviar">
+					</td>
+
 				</table>
 			</form>
 		</div>

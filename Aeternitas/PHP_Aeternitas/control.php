@@ -1,6 +1,7 @@
 <?php
     $u = $_POST['id_trabajador'];
     $p = $_POST['password_trabajador'];
+    $p = md5($p);
     include 'conex.php';
     $link = Conectarse();
 
@@ -8,26 +9,24 @@
         die('Error de conexión: ' . mysqli_connect_error());
     }
 
-    $result = mysqli_query($link, "SELECT COUNT(*) as count FROM at_empleados WHERE id='$u' AND password='$p'");
+    $result = mysqli_query($link, "SELECT * FROM at_empleados WHERE id='$u' AND password='$p'");
 
     if (!$result) {
         die('Error de consulta: ' . mysqli_error($link));
     }
 
     $row = mysqli_fetch_assoc($result);
-    $count = $row['count'];
+    $area = $row['area'];
 
-    echo "count = $count<br>";
+    session_start();
+    $_SESSION['autenticado']="SI";
+    $_SESSION['id_trabajador']=$u;
+    $_SESSION['password']=$p;
 
-    if($count == 1){
-        session_start();
-        $_SESSION['autenticado']="SI";
-        $_SESSION['id_trabajador']=$u;
-        $_SESSION['password']=$p;
-        header("Location: ../aeternitas_menu_trabajador.php");
-
+    if($area == 'Administrador'){
+        header("Location: ../aeternitas_int_administrador.php");
     }
     else{
-        header("Location: ../Formularios/aeternitas_form_inicio_sesion.php");
+        header("Location: ../aeternitas_int_trabajador.php");
     }
 ?>

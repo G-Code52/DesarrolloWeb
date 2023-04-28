@@ -1,3 +1,7 @@
+<?php
+		include("../PHP_Aeternitas/security.php")
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,11 +74,6 @@
 				document.fvalida.direccion_municipio.focus()
 				return 0;
 			}
-			if(document.fvalida.ocupacion.value.length==0){
-				alert("Debe ingresar su ocupación")
-				document.fvalida.ocupacion.focus()
-				return 0;
-			}
 			if(document.fvalida.tipo.value.length==0){
 				alert("Debe ingresar su tipo")
 				document.fvalida.tipo.focus()
@@ -99,7 +98,7 @@
 				<table id="tabla_forms">
 				<tr>
 				<td><label for="nombre"><font color="red" size="5" face="Verdana">*</font>Nombre:</label></td>
-				<td><input type="text" id="nombre" name="nombre" class="form-control" required> </td>
+				<td><input type="text" name="nombre" class="form-control" required> </td>
 				<td><label for="apellido"><font color="red" size="5" face="Verdana">*</font>Apellidos:</label></td>
 				<td><input type="text" id="apellido" name="apellido" class="form-control" required></td>
 			  </tr>
@@ -122,8 +121,6 @@
 				</td>
 			  </tr>
 			  <tr>
-				<td><label for="ocupacion"><font color="red" size="5" face="Verdana">*</font>Ocupación:</label></td>
-				<td><input type="text" id="ocupacion" name="ocupacion" class="form-control" required></td>
 				<td><label for="telefonocasa">Teléfono Casa:</label></td>
 				<td><input type="text" id="telefonocasa" name="telefonocasa" class="form-control" required></td>
 			</tr>
@@ -142,95 +139,18 @@
 			<tr>
 				<td><label for="parentesco">Parentesco:</label></td>
 				<td><input type="text" id="parentesco" name="parentesco" class="form-control" required></td>
-				<td><label for="at_cte_id">ID Cliente Benefactor:</label></td>
+				<td><label for="at_cte_id"><font color="red" size="5" face="Verdana">*</font>ID Cliente Benefactor:</label></td>
 				<td><input type="text" id="at_cte_id" name="at_cte_id" class="form-control" required></td>
 			</tr>
 			<tr>
 				<tr>
 					<td colspan="2"><a href="../aeternitas_menu_trabajador.php"><input id="submit" type="button" class="btn btn-primary" value="Atrás"></a></td>
 					<td colspan="2">
-						<input id="submit" type="submit" class="btn btn-primary" onclick="valida_envia()" value="Enviar">
+						<input id="submit" type="submit" class="btn btn-primary" onclick="valida_e	nvia()" value="Enviar">
 					</td>
 				</table>
 			</form>
 		</div>
 	</div>
-
-	<!--
-	<font color="white"><h1>Alta Cliente</h1></font>
-	
-
-		<form name="fvalida" action="../PHP_Aeternitas/aeternitas_alta_cliente.php" method="POST">
-			<table class="table table-striped" style="background-color: #21302E; border-color: #21302E;">
-				<tr>
-				<td><label for="nombre"><font color="red" size="5" face="Verdana">*</font>Nombre:</label></td>
-				<td><input type="text" id="nombre" name="nombre" class="form-control" required> </td>
-			  </tr>
-			  <tr>
-				<td><label for="apellido"><font color="red" size="5" face="Verdana">*</font>Apellidos:</label></td>
-				<td><input type="text" id="apellido" name="apellido" class="form-control" required></td>
-			  </tr>
-			  <tr>
-				<td><label for="fecha_nacimiento"><font color="red" size="5" face="Verdana">*</font>Fecha de nacimiento:</label></td>
-				<td><input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="form-control" required></td>
-			  </tr>
-			  <tr>
-				<td><label for="correo"><font color="red" size="5" face="Verdana">*</font>Correo electrónico:</label></td>
-				<td><input type="email" id="correo" name="correo" class="form-control" required></td>
-			  </tr>
-			  <tr>
-				<td><label for="celular"><font color="red" size="5" face="Verdana">*</font>Número de celular:</label></td>
-				<td><input type="tel" id="celular" name="celular" class="form-control" required></td>
-			  </tr>
-			  <tr>
-				<td valign="top"><font color="red" size="5" face="Verdana">*</font><label for="direccion_calle">Dirección:</label></td>
-				<td>
-				  <input type="text" id="direccion_calle" name="direccion_calle" class="form-control" placeholder="Calle y número exterior" required><br>
-				  <input type="text" id="direccion_num_int" name="direccion_num_int" class="form-control" placeholder="Número interior (opcional)"><br>
-				  <input type="text" id="direccion_colonia" name="direccion_colonia" class="form-control" placeholder="Colonia" required><br>
-				  <input type="text" id="direccion_cp" name="direccion_cp" class="form-control" placeholder="Código postal" required><br>
-				  <input type="text" id="direccion_municipio" name="direccion_municipio" class="form-control" placeholder="Municipio" required>
-				</td>
-			  </tr>
-			  <tr>
-				<td><label for="ocupacion"><font color="red" size="5" face="Verdana">*</font>Ocupación:</label></td>
-				<td><input type="text" id="ocupacion" name="ocupacion" class="form-control" required></td>
-			  </tr>
-			  <tr>
-				<td><label for="telefonocasa">Teléfono Casa:</label></td>
-				<td><input type="text" id="telefonocasa" name="telefonocasa" class="form-control" required></td>
-			</tr>
-			<tr>
-				<td><label for="telefonotrabajo">Teléfono Trabajo:</label></td>
-				<td><input type="text" id="telefonotrabajo" name="telefonotrabajo" class="form-control" required></td>
-			</tr>
-			<tr>
-				<td><label for="ine">INE:</label></td>
-				<td><input type="text" id="ine" name="ine" class="form-control" required></td>
-			</tr>
-			<tr>
-				<td><label for="rfc">RFC:</label></td>
-				<td><input type="text" id="rfc" name="rfc" class="form-control" required></td>
-			</tr>
-			<tr>
-				<td><label for="tipo"><font color="red" size="5" face="Verdana">*</font>Tipo:</label></td>
-				<td><input type="text" id="tipo" name="tipo" class="form-control" required></td>
-			</tr>
-			<tr>
-				<td><label for="parentesco">Parentesco:</label></td>
-				<td><input type="text" id="parentesco" name="parentesco" class="form-control" required></td>
-			</tr>
-			<tr>
-				<td><label for="at_cte_id">ID Cliente Benefactor:</label></td>
-				<td><input type="text" id="at_cte_id" name="at_cte_id" class="form-control" required></td>
-			</tr>
-			<tr>
-				<td colspan="2" align="right">
-				  <input type="submit" class="btn btn-primary" onclick="valida_envia()" value="Enviar">
-				</td>
-			</tr>
-			</table>
-	</form>
-	-->
 </body>
 </html>
