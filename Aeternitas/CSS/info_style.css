@@ -17,6 +17,12 @@ div#container{
     box-shadow: inset 4px 4px -2px rgba(0, 0, 0, 0.3);
 }
 
+.carousel, .carousel-inner > .item > table {
+    height: 50vh;
+
+}
+
+
 div#info{
     margin: 10vh auto 0;
     background-color: #FFFFFF;
@@ -43,21 +49,17 @@ div#lista{
 }
 
 div#infoGeneral{
-    margin: 10vh auto 0;
-    background-color: #FFFFFF;
-    box-sizing: border-box;
-    box-shadow: 0 0 2 rgba(0, 0, 0, 0.7); 
-    border-radius: 10px;
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border: 2px solid grey;
-    width:300px;
-    height: 400px;
-    box-sizing: border-box;
+    color: #777777;
+    margin-top: 30px;
     justify-content: center;
     align-items: center;
-    text-align: center; 
+    text-align: center;
+    width: 100%;
+}
 
+table {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1{
@@ -72,6 +74,12 @@ h1{
     
 }
 
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    color: #55A092;
+}
+
 p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #55A092;
@@ -79,12 +87,4 @@ p {
     justify-content: left;
     align-items: left;
     text-align: left; 
-}
-  
-div#carousel{
-    width:100%;
-    height: 100vh;
-    background-color: #55A092 !important;
-    box-sizing: border-box;
-    box-shadow: inset 4px 4px -2px rgba(0, 0, 0, 0.3);
 }

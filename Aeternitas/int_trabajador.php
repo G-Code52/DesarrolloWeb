@@ -1,3 +1,6 @@
+<?php
+	include("PHP_Aeternitas/security.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,8 +9,8 @@
 	<title> Aeternitas </title>
 </head>
 	<frameset rows="*,90%" border="0">
-		<frame src="aeternitas_menu_numtrabajador.php" name="Menu_Trabajador" noresize>
-		<frame src="aeternitas_info.php" name="Pantalla_principal" noresize>
+		<frame src="navbar_trabajador.php" name="Menu_Trabajador" noresize>
+		<frame src="info.php" name="Pantalla_principal" noresize>
 	</frameset>
 	<frame src="tab_anidada.html" name="mainframe">
 </html>

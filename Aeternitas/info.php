@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,6 +62,24 @@
 				</div>
 			</div>
 		</div>
+		<div id="infoGeneral"> 
+			<table width="90%" align="center">
+				<tr>
+					<td width="50%">
+						<img src="Imagenes/at.jpg" width="90%">
+					</td>
+					<td align="left">
+						<h1 align="center">¿Quienes somos?</h1>
+						<br><br>
+						Somos el primer tanarotio en Puebla en utilizar los eventos de memoria 
+						como parte del servicio funerario tradicional. En cada servicio utiliamos 
+						herramientas tanatológicas que permiten a cada familia despedir la presencia física 
+						de su trascendente y resguardar con honor su presencia espiritual a través de la "memoria viva"	
+					</td>
+				</tr>
+				
+			</table>
+			</div>
 	</div>
 </body>
 </html>

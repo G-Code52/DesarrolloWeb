@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,30 +22,23 @@
 			<div class="carousel-item active">
 				<img src="Imagenes/Servicios/SalaVelacion.jpg" class="d-block w-100" height="245hv">				
 			</div>
-			<?php
-				include "PHP_Aeternitas/conex.php";
-				$link = Conectarse();
-				$result = mysqli_query($link, "Select * from at_servicios WHERE tipo='Velacion'");
-				while ($row = mysqli_fetch_array($result)) {
-					echo "<div id='carouselDiv' class='carousel-item'>
+			
+<div id='carouselDiv' class='carousel-item'>
 							<table class='table table-bordered' width='80%'>
 							<tbody>
 							<tr>
-								<td rowspan='3'  align='center'><img src='Imagenes/Servicios/".$row['imagen']."' alt='servicio 1' class='img-fluid' width='300'></td>
-								<td>".$row['tipo']."</td>
+								<td rowspan='3'  align='center'><img src='Imagenes/Servicios/velacion1.jpg' alt='servicio 1' class='img-fluid' width='300'></td>
+								<td>Velacion</td>
 							</tr>
 							<tr>
-								<td>Nombre: ".$row['nombre']."</td>
+								<td>Nombre: Velacion individual</td>
 							</tr>
 							<tr>
-								<td>Precio: $" .$row['preciooriginal']. "</td>
+								<td>Precio: $30000</td>
 							</tr>
 							</table>
 						</div>
-					";
-				}
-			?>
-		</div>
+							</div>
 		<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			<span class="sr-only">Previous</span>
@@ -55,10 +49,26 @@
 		</a>
 	</div>
 
-	<div id="infoGeneral">
-		Aquí va el contenido que deseas colocar debajo del carousel.
+	<div>
+		<h1 align="center">Servicios de Velación en Nuestra Sala</h1><br><br><br>
+		<table>
+			<tr>
+				<td width="50%"><img src="Imagenes/SalaVelacion.jpeg" width="90%"></td>
+				<td>
+					<h2 align="center">Nuestra sala de velación cuenta con todo lo necesario para brindar un servicio de calidad.</h2> <br>
+					<p><span style="color: #55A092; font-size: 12px; font-family: Verdana, Geneva, Tahoma, sans-serif; ">
+							<ul>
+								<li>Lugar con entrada de luz natural y cómodo mobiliario para la familia.</li>
+								<li>Disponemos de salas de varios tamaños para adaptarnos a sus necesidades.</li>
+								<li>Ofrecemos velación las 24 horas del día para que pueda despedirse de su ser querido en el momento que lo necesite.</li>
+								<li>Además, disponemos de servicio de coffe break para ofrecer un momento de tranquilidad en esos momentos difíciles.</li>
+							</ul><br>
+							Confíe en nosotros para ofrecerle un servicio de velación respetuoso y cálido en un ambiente tranquilo y acogedor.
+					</span></p>
+				</td>
+			</tr>
+		</table>
 	</div>
-</div>
 
 
 </body>

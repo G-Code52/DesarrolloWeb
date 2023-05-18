@@ -1,3 +1,6 @@
+<?php
+	include("PHP_Aeternitas/security.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +13,7 @@
 	<link rel="manifest" href="/site.webmanifest">
 </head>
 	<frameset rows="*,90%" border="0">
-		<frame src="aeternitas_menu_administrador.php" name = "Menu_Principal" noresize>
-		<frame src="aeternitas_info.php" name="Pantalla_principal" noresize>
+		<frame src="navbar_administrador.php" name = "Menu_Principal" noresize>
+		<frame src="info.php" name="Pantalla_principal" noresize>
 	</frameset>
 </html>
