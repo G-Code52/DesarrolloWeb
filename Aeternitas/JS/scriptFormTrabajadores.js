@@ -4,8 +4,12 @@ var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
 
 
+
+
+
 function validaSeccion() {
 
+	/*
 	if(document.fvalida.nombre.value.length==0){
 		alert("Tiene que escribir su nombre")
 		document.fvalida.nombre.focus()
@@ -16,32 +20,16 @@ function validaSeccion() {
 		document.fvalida.apellido.focus()
 		return 0;
 	}
-	// Obtén la fecha de nacimiento del usuario
-	var fechaNacimiento = document.fvalida.fecha_nacimiento.value;
-
-	// Verifica si se ha seleccionado una fecha de nacimiento
-	if (fechaNacimiento.length === 0) {
-	alert("Debe seleccionar una fecha de nacimiento");
-	document.fvalida.fecha_nacimiento.focus();
-	return 0;
-	}
-
-	if (document.fvalida.correo.value.length==0) {
-		alert("Tiene que escribir su correo");
-		document.fvalida.correo.focus();
+	
+	if (document.fvalida.curp.value.length==0) {
+		alert("Tiene que escribir su curp");
+		document.fvalida.curp.focus();
 		return 0;
 	}
-
-	if (document.fvalida.telefono.value.length==0) {
-		alert("Tiene que escribir su telefono");
-		document.fvalida.telefono.focus();
-		return 0;
-	}
-
 	
 	if(document.fvalida.calle.value.length==0){
 		alert("Tiene que escribir su calle")
-		document.fvalida.correo.focus()
+		document.fvalida.calle.focus()
 		return 0;
 	}
 
@@ -63,12 +51,34 @@ function validaSeccion() {
 		return 0;
 	}
 
-	if(document.fvalida.municipio.value.length==0){
-		alert("Tiene que escribir su municipio")
+	if(document.fvalida.telefono.value.length==0){
+		alert("Tiene que escribir su telefono")
+		document.fvalida.telefono.focus()
+		return 0;
+	}
+
+	if(document.fvalida.correo.value.length==0){
+		alert("Tiene que escribir su correo")
 		document.fvalida.correo.focus()
 		return 0;
 	}
 
+	if(document.fvalida.area.value.length==0){
+		alert("Tiene que escoger su area")
+		document.fvalida.area.focus()
+		return 0;
+	}
+	if(document.fvalida.at_epo_id.value.length==0){
+		alert("Tiene que escoger el id del Empleado Supervisor")
+		document.fvalida.at_epo_id.focus()
+		return 0;
+	}
+	if(document.fvalida.password.value.length==0){
+		alert("Tiene que introducir una contraseña")
+		document.fvalida.password.focus()
+		return 0;
+	}
+	*/
 
 	alert("Formulario enviado")
 	document.fvalida.submit()

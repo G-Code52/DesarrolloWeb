@@ -21,14 +21,14 @@
     <div class="row">
 
         <div class="col-md-6 col-md-offset-3">
-		<FORM METHOD="POST" action="modifica_cliente.php">	
+		<FORM METHOD="POST" action="modifica_trabajadores.php">	
 		<label for="nombre"><font color="red" size="5" face="Verdana">*</font>ID a modificar:</label>
 		<select name="id" class="form-control">
 		<?php
 			include "../PHP_Aeternitas/conex.php";
 			$link = Conectarse();
 
-			$result = mysqli_query($link, "SELECT * FROM at_clientes");
+			$result = mysqli_query($link, "SELECT * FROM at_empleados");
 			while ($row = mysqli_fetch_array($result)) {
 				echo '<option>'.$row['id'];
 			}
@@ -37,8 +37,9 @@
 		<input type="submit" name="action" value="Mostrar" class="btn btn-primary">
 		</form>
 		
-            <form id="msform" name="fvalida" method="POST" action="../PHP_Aeternitas/modifica_cliente.php">
-                <!-- progressbar -->
+            <form id="msform" name="fvalida" method="POST" action="../PHP_Aeternitas/modifica_trabajadores.php">
+            <h1>MODIFICA TRABAJADORES</h1>    
+			<!-- progressbar -->
                 <ul id="progressbar">
                     <li class="active">Datos Personales</li>
                     <li>Dirección</li>
@@ -51,22 +52,20 @@
 							else
 								$var = $_POST['id'];
 							// echo $var; die();
-							$result = mysqli_query($link, "Select * from at_clientes where id ='$var'");
+							$result = mysqli_query($link, "Select * from at_empleados where id ='$var'");
 							$row = mysqli_fetch_array($result);
 							echo "
                 <fieldset>
                     <h2 class='fs-title'>Datos Personales</h2>
-                    <h3 class='fs-subtitle'>Todos los datos en este campo son obligatorios</h3>
+                    <h3 class='fs-subtitle'>Los siguientes campos no se pueden modificar</h3>
                     <br><br>
-                    <label> ID del Cliente a Modificar </label>
+                    <label> ID del Empleado a Modificar </label>
                     <input type='number' name='id' value='".$row['id']."' readonly/>
-                    <input type='text' name='nombre' value='". $row['nombre'] ."'/>
-                    <input type='text' name='apellido'value='" . $row['apellido'] . "'/>
-                    <label for='fecha_nacimiento'>Fecha Nacimiento</label><br>
-                    <input type='date' name='fecha_nacimiento' value='" . $row['fechanacimiento'] . "'/>
-                    <input type='email' name='correo' value='" . $row['correo'] . "'/>
-                    <input type='tel' name='telefono' value='" . $row['telefono'] . "'/>
+                    <input type='text' name='nombre' value='". $row['nombre'] ."' readonly/>
+					<input type='text' name='apellido' value='". $row['apellido'] ."' readonly/>
 
+                    <input type='text' name='curp' value='" . $row['curp'] . "' readonly/>
+					
                     <input type='button' name='next' class='next action-button' value='Siguiente'/>
                 </fieldset>
                 <fieldset>
@@ -77,8 +76,6 @@
                     <input type='text' name='numinterior' placeholder='Numero Interior (Opcional)'  value='" . $row['numinterior'] . "'/>
                     <input type='text' name='colonia' value='" . $row['colonia'] . "'/>
                     <input type='text' name='codigopostal' value='" . $row['codigopostal'] . "'/>
-                    <input type='text' name='municipio' value='" . $row['municipio'] . "'/>
-
 
                     <input type='button' name='previous' class='previous action-button-previous' value='Previo'/>
                     <input type='button' name='next' class='next action-button' value='Siguiente'/>
@@ -86,31 +83,21 @@
                 <fieldset>
                     <h2 class='fs-title'>Datos Generales</h2>
                     <h3 class='fs-subtitle'>Todos los campos son obligatorios, a menos que diga (Opcional)</h3>
-                    <input type='tel' name='telefonocasa' placeholder='Telefono Casa (Opcional)' value='" . $row['telefonocasa'] . "'/>
-                    <input type='tel' name='telefonotrabajo' placeholder='Telefono Trabajo (Opcional)' value='" . $row['telefonotrabajo'] . "'/>
-                    <input type='text' name='ine' placeholder='INE (Opcional)' value='" . $row['ine'] . "'/>
-                    <input type='text' name='rfc' placeholder='RFC (Opcional)' value='" . $row['rfc'] . "'/>
-                    <label>Tipo de Cliente</label>
-                    <select name='tipo'>
-                        <option value='Comprador'>Comprador</option>
-                        <option value='Benefactor'>Benefactor</option>
+                    <label>Telefono</label>
+					<input type='tel' name='telefono' placeholder='Telefono' value='" . $row['telefono'] . "'/>
+                    <label>Correo</label>
+					<input type='email' name='correo' placeholder='Correo' value='" . $row['correo'] . "'/>
+                    <label>Titulo Academico</label>
+					<input type='text' name='tituloacademico' placeholder='Titulo Academico (Opcional)' value='" . $row['tituloacademico'] . "'/>
+                    <label>Area del Empleado</label>
+                    <select name='area'>
+                        <option value='Ventas'>Ventas</option>
+                        <option value='Administrador'>Administrador</option>
                     </select><br>
-                    <label>Parentesco</label>
-                    <select name='parentesco'>
-						<option value='Padre/Madre'>Dueño</option>
-                        <option value='Padre/Madre'>Comprador</option>
-                        <option value='Padre/Madre'>Padre/Madre</option>
-                        <option value='Hermano'>Hermano</option>
-                        <option value='Tio'>Tío</option>
-                        <option value='Sobrino'>Sobrino</option>
-                        <option value='Suegro'>Suegro</option>
-                        <option value='Amigo'>Amigo</option>
-                        <option value='Otro'>otro</option>
-                    </select>
-                    <br><br><br>
-                    <label>ID Cliente Benefactor (0 si no es benefactor)</label><br>
-                    <input type='number' name='at_cte_id' placeholder='ID Cliente(Opcional)' value='" . $row['at_cte_id'] . "'/>
-
+					<label>Comision</label>
+                    <input type='number' name='comision' placeholder='Comision' value='" . $row['comision'] . "'/>
+					<label>ID Empleado Supervisor</label>
+					<input type='number' name='at_epo_id' placeholder='Id Empleado Supervisor' value='" . $row['at_epo_id'] . "'/>
 
                     <input type='button' name='previous' class='previous action-button-previous' value='Previo'/>
                     <input type='button' name='button' class='submit action-button' onclick='validaSeccion()' value='Enviar'/>
@@ -136,6 +123,6 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
-    <script  src="../JS/scriptFormCliente.js"></script>
+    <script  src="../JS/scriptFormTrabajadores.js"></script>
 </body>
 </html>

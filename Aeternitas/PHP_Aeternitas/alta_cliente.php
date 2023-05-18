@@ -1,3 +1,6 @@
+<?php
+		include("./security.php")
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,7 +48,13 @@
      , '$colonia', '$codigopostal', '$municipio', '$telefonocasa', '$telefonotrabajo'
      , '$ine', '$rfc', '$tipo', '$parentesco', '$at_cte_id' )";
     mysqli_query($link, $sql) or die (mysqli_error($link));
-    header ("Location: ../menu_trabajador.php");
+    
+    if($_SESSION['area']=="Administrador"){
+        header ("Location: ../menu_admin.php");
+    }
+    else{
+        header ("Location: ../menu_trabajador.php");
+    }
 
     //Cerrar la conexión a la base de datos
     mysqli_close($link);

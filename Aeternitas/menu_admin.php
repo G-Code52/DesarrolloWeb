@@ -58,9 +58,9 @@
 				<a href="Formularios/visualiza_cliente.php"><input type="button" class="btn btn-primary" name="visualiza_cliente" value="Visualiza Cliente"></a>			
 			</td>
 		    <td align="center" width="20%">
-		        <a href="Formularios/aeternitas_form_alta_trabajadores.php"><input type="button" class="btn btn-primary" name="alta_trabajadores" value="Alta Trabajadores"></a>
+		        <a href="Formularios/alta_trabajadores.php"><input type="button" class="btn btn-primary" name="alta_trabajadores" value="Alta Trabajadores"></a>
 				<br><br>
-		        <a href="Formularios/aeternitas_form_modificar_trabajadores.php"><input type="button" class="btn btn-primary" name="modificar_trabajador" value="Modificar Trabajador"></a>
+		        <a href="Formularios/modifica_trabajadores.php"><input type="button" class="btn btn-primary" name="modificar_trabajador" value="Modificar Trabajador"></a>
 		        <br><br>
 		        <a href="Formularios/aeternitas_form_eliminar_trabajadores.php"><input type="button" class="btn btn-primary" name="eliminar_trabajador" value="Eliminar Trabajador"></a>	
 				<br> <br>

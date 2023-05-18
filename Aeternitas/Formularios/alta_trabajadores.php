@@ -1,4 +1,3 @@
-
 <?php
 		include("../PHP_Aeternitas/security.php")
 ?>
@@ -8,7 +7,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Formulario Clientes</title>
+	<title>Formulario Trabajadores</title>
 
 	<script type="text/javascript">
         
@@ -22,8 +21,8 @@
 <body>
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <form id="msform" name="fvalida" method="POST" action="../PHP_Aeternitas/alta_cliente.php">
-				<h1>ALTA CLIENTE</h1>
+            <form id="msform" name="fvalida" method="POST" action="../PHP_Aeternitas/alta_trabajadores.php">
+                <h1>ALTA TRABAJADORES</h1>
                 <!-- progressbar -->
                 <ul id="progressbar">
                     <li class="active">Datos Personales</li>
@@ -36,10 +35,7 @@
                     <h3 class="fs-subtitle">Todos los datos en este campo son obligatorios</h3>
                     <input type="text" name="nombre" placeholder="Nombre"/>
                     <input type="text" name="apellido" placeholder="Apellidos"/>
-                    <label for="fechanacimiento">Fecha Nacimiento</label><br>
-                    <input type="date" name="fecha_nacimiento" value="2001-09-10"/>
-                    <input type="email" name="correo" placeholder="Correo Electrónico"/>
-                    <input type="tel" name="telefono" placeholder="Telefono Celular"/>
+                    <input type="text" name="curp" placeholder="curp"/>
 
                     <input type="button" name="next" class="next action-button" value="Siguiente"/>
                 </fieldset>
@@ -51,8 +47,6 @@
                     <input type="text" name="numinterior" placeholder="Numero Interior (Opcional)"/>
                     <input type="text" name="colonia" placeholder="Colonia"/>
                     <input type="text" name="codigopostal" placeholder="Codigo Postal"/>
-                    <input type="text" name="municipio" placeholder="Municipio"/>
-
 
                     <input type="button" name="previous" class="previous action-button-previous" value="Previo"/>
                     <input type="button" name="next" class="next action-button" value="Siguiente"/>
@@ -60,30 +54,20 @@
                 <fieldset>
                     <h2 class="fs-title">Datos Generales</h2>
                     <h3 class="fs-subtitle">Todos los campos son obligatorios, a menos que diga (Opcional)</h3>
-                    <input type="tel" name="telefonocasa" placeholder="Telefono Casa (Opcional)"/>
-                    <input type="tel" name="telefonotrabajo" placeholder="Telefono Trabajo (Opcional)"/>
-                    <input type="text" name="ine" placeholder="INE (Opcional)"/>
-                    <input type="text" name="rfc" placeholder="RFC (Opcional)"/>
-                    <label>Tipo de Cliente</label>
-                    <select name="tipo">
-                        <option value="Comprador">Comprador</option>
-                        <option value="Benefactor">Benefactor</option>
+                    <input type="tel" name="telefono" placeholder="Telefono"/>
+                    <input type="email" name="correo" placeholder="Correo"/>
+                    <input type="text" name="tituloacademico" placeholder="Titulo Académico"/>
+                    <label>AREA</label>
+                    <select name="area">
+                        <option value="Ventas">Ventas</option>
+                        <option value="Administrador">Administrador</option>
                     </select><br>
-                    <label>Parentesco</label>
-                    <select name="parentesco">
-                        <option value="Padre/Madre">Comprador</option>
-                        <option value="Padre/Madre">Padre/Madre</option>
-                        <option value="Hermano">Hermano</option>
-                        <option value="Tio">Tío</option>
-                        <option value="Sobrino">Sobrino</option>
-                        <option value="Suegro">Suegro</option>
-                        <option value="Amigo">Amigo</option>
-                        <option value="Otro">otro</option>
-                    </select>
-                    <br><br><br>
-                    <label>ID Cliente Benefactor (0 si no es benefactor)</label><br>
-                    <input type="number" name="at_cte_id" placeholder="ID Cliente(Opcional)">
-
+                    <input type="number" name="comision" placeholder="Comision"/>
+                    <label>Fecha de Contratación</label>
+                    <input type="date" name="fechacontratacion"/>
+					
+					<input type="number" name="at_epo_id" placeholder="ID Empleado Supervisor"/>
+					<input type="text" name="password" placeholder="Contraseña"/>
 
                     <input type="button" name="previous" class="previous action-button-previous" value="Previo"/>
                     <input type="button" name="button" class="submit action-button" onclick="validaSeccion()" value="Enviar"/>
@@ -109,6 +93,6 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
-    <script  src="../JS/scriptFormCliente.js"></script>
+    <script  src="../JS/scriptFormTrabajadores.js"></script>
 </body>
 </html>

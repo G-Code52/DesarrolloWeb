@@ -1,3 +1,6 @@
+<?php
+	include("./security.php")
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,24 +10,28 @@
 </head>
 <body>
     <?php
+    include "./conex.php";
+    $link = Conectarse();
+
+    $idCliente = $_POST['id'];
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
-    $fecha_nacimiento = $_POST['fecha_nacimiento'];
+    $fechanacimiento = $_POST['fecha_nacimiento'];
     $correo = $_POST['correo'];
-    $celular = $_POST['celular'];
-    $calle = $_POST['direccion_calle'];
-    $num_ext = $_POST['direccion_num_ext'];
-    $num_int = $_POST['direccion_num_int'];
-    $colonia = $_POST['direccion_colonia'];
-    $CP = $_POST['direccion_cp'];
-    $municipio = $_POST['direccion_municipio'];
-    $telcasa = $_POST['telefonocasa'];
-    $teltrabajo = $_POST['telefonotrabajo'];
+    $telefono = $_POST['telefono'];
+    $calle = $_POST['calle'];
+    $numexterior = $_POST['numexterior'];
+    $numinterior = $_POST['numinterior'];
+    $colonia = $_POST['colonia'];
+    $codigopostal = $_POST['codigopostal'];
+    $municipio = $_POST['municipio'];
+    $telefonocasa = $_POST['telefonocasa'];
+    $telefonotrabajo = $_POST['telefonotrabajo'];
     $ine = $_POST['ine'];
     $rfc = $_POST['rfc'];
     $tipo = $_POST['tipo'];
     $parentesco = $_POST['parentesco'];
-    $idcliente = $_POST['at_cte_id'];
+    $at_cte_id = $_POST['at_cte_id'];
 
     //Comprobar si la conexión fue exitosa
     if (!$link) {
@@ -35,25 +42,31 @@
     $sql = "UPDATE at_clientes SET 
     nombre='$nombre',
     apellido='$apellido',
-    fechanacimiento='$fecha_nacimiento',
+    fechanacimiento='$fechanacimiento',
     correo='$correo',
-    telefono='$celular',
+    telefono='$telefono',
     calle='$calle',
-    numexterior='$num_ext',
-    numinterior='$num_int',
+    numexterior='$numexterior',
+    numinterior='$numinterior',
     colonia='$colonia',
-    codigopostal='$CP',
+    codigopostal='$codigopostal',
     municipio='$municipio',
-    telefonocasa='$telcasa',
-    telefonotrabajo='$teltrabajo',
+    telefonocasa='$telefonocasa',
+    telefonotrabajo='$telefonotrabajo',
     ine='$ine',
     rfc='$rfc',
     tipo='$tipo',
     parentesco='$parentesco'
-    WHERE idcliente='$idcliente'";
+    WHERE id='$idCliente'";
 
     mysqli_query($link, $sql) or die (mysqli_error($link));
-    header ("Location: ../aeternitas_menu_trabajador.php");
+ 
+    if($_SESSION['area']=='Administrador'){
+        header ("Location: ../menu_admin.php");
+    }
+    else{
+        header ("Location: ../menu_trabajador.php");
+    }
 
     //Cerrar la conexión a la base de datos
     mysqli_close($link);
