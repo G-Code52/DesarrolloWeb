@@ -21,6 +21,10 @@
 				<a href="nichos.php" target="Pantalla_principal">Nichos</a>
 			  </div>
 			  <div class="col-5 text-end">
+			  <a href="PHP_Aeternitas/salir.php" target="_parent"> Cerrar Sesion
+				
+			  </a>
+
 				<a href="menu_trabajador.php" target="Pantalla_principal">
 					<?php
 					session_start();

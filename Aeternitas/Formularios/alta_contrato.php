@@ -48,7 +48,14 @@ include("../PHP_Aeternitas/security.php")
                     </select><br><br>
 
                     <label>Nombre Empleado</label>
-					<input type="text" name="nombretrabajador" value="<?php echo $_SESSION['nombre']." ".$_SESSION['apellido']; ?>" readonly/>
+                    <select name="nombreempleado" class="form-control" id="empleado">
+                        <?php
+                        $result = mysqli_query($link, "SELECT * FROM at_empleados");
+                        while ($row = mysqli_fetch_array($result)) {
+                            echo '<option value="'.$row['id'].'">'.$row['nombre']." ".$row['apellido'].'</option>';
+                        }
+                        ?>
+                    </select>
 
                     <input type="button" name="next" class="next action-button" value="Siguiente"/>
 

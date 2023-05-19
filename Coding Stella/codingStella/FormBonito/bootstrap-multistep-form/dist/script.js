@@ -3,87 +3,9 @@ var current_fs, next_fs, previous_fs; //fieldsets
 var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
 
-
-
-
-
-function validaSeccion() {
-
-	if(document.fvalida.nombre.value.length==0){
-		alert("Tiene que escribir su nombre")
-		document.fvalida.nombre.focus()
-		return 0;
-	}
-	if(document.fvalida.apellido.value.length==0){
-		alert("Tiene que escribir sus apellidos")
-		document.fvalida.apellido.focus()
-		return 0;
-	}
-	// Obtén la fecha de nacimiento del usuario
-	var fechaNacimiento = document.fvalida.fecha_nacimiento.value;
-
-	// Verifica si se ha seleccionado una fecha de nacimiento
-	if (fechaNacimiento.length === 0) {
-	alert("Debe seleccionar una fecha de nacimiento");
-	document.fvalida.fecha_nacimiento.focus();
-	return 0;
-	}
-
-	if (document.fvalida.correo.value.length==0) {
-		alert("Tiene que escribir su correo");
-		document.fvalida.correo.focus();
-		return 0;
-	}
-
-	if (document.fvalida.telefono.value.length==0) {
-		alert("Tiene que escribir su telefono");
-		document.fvalida.telefono.focus();
-		return 0;
-	}
-
-	
-	if(document.fvalida.calle.value.length==0){
-		alert("Tiene que escribir su calle")
-		document.fvalida.correo.focus()
-		return 0;
-	}
-
-	if(document.fvalida.numexterior.value.length==0){
-		alert("Tiene que escribir su numero exterior")
-		document.fvalida.correo.focus()
-		return 0;
-	}
-
-	if(document.fvalida.colonia.value.length==0){
-		alert("Tiene que escribir su colonia")
-		document.fvalida.correo.focus()
-		return 0;
-	}
-
-	if(document.fvalida.codigopostal.value.length==0){
-		alert("Tiene que escribir su codigo postal")
-		document.fvalida.correo.focus()
-		return 0;
-	}
-
-	if(document.fvalida.municipio.value.length==0){
-		alert("Tiene que escribir su municipio")
-		document.fvalida.correo.focus()
-		return 0;
-	}
-
-
-	alert("Formulario enviado")
-	document.fvalida.submit()
-
-}
-
-
 $(".next").click(function(){
-
 	if(animating) return false;
 	animating = true;
-
 	
 	current_fs = $(this).parent();
 	next_fs = $(this).parent().next();
@@ -153,3 +75,7 @@ $(".previous").click(function(){
 		easing: 'easeInOutBack'
 	});
 });
+
+$(".submit").click(function(){
+	return false;
+})

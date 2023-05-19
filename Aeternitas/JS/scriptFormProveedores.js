@@ -4,74 +4,77 @@ var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
 
 
-
-
-
 function validaSeccion() {
 
+	/*
+	if(document.fvalida.tipo.value.length==0){
+		alert("Tiene que escoger un tipo de servicio")
+		document.fvalida.tipo.focus()
+		return 0;
+	}
+	if(document.fvalida.preciooriginal.value.length==0){
+		alert("Tiene que escribir el precio")
+		document.fvalida.preciooriginal.focus()
+		return 0;
+	}
 	if(document.fvalida.nombre.value.length==0){
-		alert("Tiene que escribir su nombre")
+		alert("Tiene que escribir el nombre del servicio")
 		document.fvalida.nombre.focus()
 		return 0;
 	}
-	if(document.fvalida.apellido.value.length==0){
-		alert("Tiene que escribir sus apellidos")
-		document.fvalida.apellido.focus()
+	if(document.fvalida.descripcion.value.length==0){
+		alert("Tiene que escribir la descripcon del servicio")
+		document.fvalida.descripcion.focus()
 		return 0;
 	}
-	// Obtén la fecha de nacimiento del usuario
-	var fechaNacimiento = document.fvalida.fecha_nacimiento.value;
-
-	// Verifica si se ha seleccionado una fecha de nacimiento
-	if (fechaNacimiento.length === 0) {
-	alert("Debe seleccionar una fecha de nacimiento");
-	document.fvalida.fecha_nacimiento.focus();
-	return 0;
-	}
-
-	if (document.fvalida.correo.value.length==0) {
-		alert("Tiene que escribir su correo");
-		document.fvalida.correo.focus();
+	if(document.fvalida.nombrearchivo.value.length==0){
+		alert("Tiene que escribir el nombre de la imagen subida")
+		document.fvalida.nombrearchivo.focus()
 		return 0;
 	}
-
-	if (document.fvalida.telefono.value.length==0) {
-		alert("Tiene que escribir su telefono");
-		document.fvalida.telefono.focus();
+	if(document.fvalida.archivo.value.length==0){
+		alert("Tiene que escoger una archivo")
+		document.fvalida.archivo.focus()
 		return 0;
-	}
+	}*/
+	
+
+	alert("Formulario enviado")
+	document.fvalida.submit()
+
+}
+
+function validaSeccionEdit() {
 
 	
-	if(document.fvalida.calle.value.length==0){
-		alert("Tiene que escribir su calle")
-		document.fvalida.correo.focus()
+	if(document.fvalida.tipo.tipoinsumo.length==0){
+		alert("Tiene que escoger un tipo de insumo")
+		document.fvalida.tipoinsumo.focus()
+		return 0;
+	}
+	if(document.fvalida.nombreempresa.value.length==0){
+		alert("Tiene que escribir el nombre de la empresa")
+		document.fvalida.nombreempresa.focus()
+		return 0;
+	}
+	if(document.fvalida.nombre.telefono.length==0){
+		alert("Tiene que escribir el telefono de contacto")
+		document.fvalida.telefono.focus()
+		return 0;
+	}
+	if(document.fvalida.precioservicio.value.length==0){
+		alert("Tiene que escribir el precio del servicio")
+		document.fvalida.precioservicio.focus()
+		return 0;
+	}
+	if(document.fvalida.descripcion.value.length==0){
+		alert("Tiene que escribir la descripcion del servicio")
+		document.fvalida.descripcion.focus()
 		return 0;
 	}
 
-	if(document.fvalida.numexterior.value.length==0){
-		alert("Tiene que escribir su numero exterior")
-		document.fvalida.correo.focus()
-		return 0;
-	}
 
-	if(document.fvalida.colonia.value.length==0){
-		alert("Tiene que escribir su colonia")
-		document.fvalida.correo.focus()
-		return 0;
-	}
-
-	if(document.fvalida.codigopostal.value.length==0){
-		alert("Tiene que escribir su codigo postal")
-		document.fvalida.correo.focus()
-		return 0;
-	}
-
-	if(document.fvalida.municipio.value.length==0){
-		alert("Tiene que escribir su municipio")
-		document.fvalida.correo.focus()
-		return 0;
-	}
-
+	
 
 	alert("Formulario enviado")
 	document.fvalida.submit()

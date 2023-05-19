@@ -41,57 +41,50 @@
 		    <td align="center" width="20%">
 		        <a href="Formularios/alta_contrato.php"><input type="button" class="btn btn-primary" name="nuevo_contrato" value="Nuevo Contrato"></a>
 				<br><br>
-		        <a href="Formularios/modifica_contrato.php"><input type="button" class="btn btn-primary" name="modificar_contrato" value="Modificar Contrato"></a>
-		        <br><br>
-		        <a href="Formularios/elimina_contrato.php"><input type="button" class="btn btn-primary" name="eliminar_contrato" value="Eliminar Contrato"></a>
-				<br> <br>
-				<a href="Formularios/visualiza_contrato.php"><input type="button" class="btn btn-primary" name="visualiza_contrato" value="Visualiza Contrato"></a>			
-			
+				<a href="Formularios/visualiza_contrato.php"><input type="button" class="btn btn-primary" name="visualiza_contrato" value="Visualiza Contrato"></a>	
+
 		    </td>
 		    <td align="center" width="20%">
 		        <a href="Formularios/alta_cliente.php"><input type="button" class="btn btn-primary" name="alta_cliente" value="Alta Cliente"></a>
 				<br><br>
 		        <a href="Formularios/modifica_cliente.php"><input type="button" class="btn btn-primary" name="modificar_cliente" value="Modificar Cliente"></a>
 		        <br><br>
-		        <a href="Formularios/aeternitas_form_eliminar_clientes.php"><input type="button" class="btn btn-primary" name="eliminar_cliente" value="Eliminar Cliente"></a>	
-				<br> <br>
-				<a href="Formularios/visualiza_cliente.php"><input type="button" class="btn btn-primary" name="visualiza_cliente" value="Visualiza Cliente"></a>			
-			</td>
+		        <a href="Formularios/elimina_cliente.php"><input type="button" class="btn btn-primary" name="eliminar_cliente" value="Eliminar Cliente"></a>	
+				<br><br>
+				<a href="Formularios/visualiza_cliente.php"><input type="button" class="btn btn-primary" name="visualiza_cliente" value="Visualiza Cliente"></a>	
+
 		    <td align="center" width="20%">
 		        <a href="Formularios/alta_trabajadores.php"><input type="button" class="btn btn-primary" name="alta_trabajadores" value="Alta Trabajadores"></a>
 				<br><br>
 		        <a href="Formularios/modifica_trabajadores.php"><input type="button" class="btn btn-primary" name="modificar_trabajador" value="Modificar Trabajador"></a>
 		        <br><br>
-		        <a href="Formularios/aeternitas_form_eliminar_trabajadores.php"><input type="button" class="btn btn-primary" name="eliminar_trabajador" value="Eliminar Trabajador"></a>	
-				<br> <br>
-				<a href="Formularios/visualiza_trabajadores.php"><input type="button" class="btn btn-primary" name="visualiza_trabajadores" value="Visualiza Trabajadores"></a>			
+		        <a href="Formularios/elimina_trabajador.php"><input type="button" class="btn btn-primary" name="eliminar_trabajador" value="Eliminar Trabajador"></a>	
+				<br><br>
+				<a href="Formularios/visualiza_trabajador.php"><input type="button" class="btn btn-primary" name="visualiza_trabajador" value="Visualiza Trabajador"></a>	
+
 			</td>
 		    <td align="center" width="20%">
-		        <a href="Formularios/aeternitas_form_proveedores.php"><input type="button" class="btn btn-primary" name="alta_proveedores" value="Alta Proveedores"></a>
+		        <a href="Formularios/alta_proveedores.php"><input type="button" class="btn btn-primary" name="alta_proveedores" value="Alta Proveedores"></a>
 				<br><br>
-		        <a href="Formularios/aeternitas_form_modificar_proveedores.php"><input type="button" class="btn btn-primary" name="modificar_proveedor" value="Modificar Proveedor"></a>
+		        <a href="Formularios/modifica_proveedores.php"><input type="button" class="btn btn-primary" name="modificar_proveedor" value="Modificar Proveedor"></a>
 		        <br><br>
-		        <a href="Formularios/aeternitas_form_eliminar_proveedores.php"><input type="button" class="btn btn-primary" name="eliminar_proveedor" value="Eliminar Proveedor"></a>	
+		        <a href="Formularios/elimina_proveedor.php"><input type="button" class="btn btn-primary" name="eliminar_proveedor" value="Eliminar Proveedor"></a>	
 		    	<br><br>
-				<a href="Formularios/visualiza_proveedor.php"><input type="button" class="btn btn-primary" name="visualiza_proveedor" value="Visualiza Proveedores"></a>			
+				<a href="Formularios/visualiza_proveedor.php"><input type="button" class="btn btn-primary" name="visualiza_proveedor" value="Visualiza Proveedor"></a>	
 
 			</td>
 		    <td align="center" width="20%">
-		        <a href="Formularios/aeternitas_form_servicios.php"><input type="button" class="btn btn-primary" name="alta_servicios" value="Alta Servicios"></a>
+		        <a href="Formularios/alta_servicios.php"><input type="button" class="btn btn-primary" name="alta_servicios" value="Alta Servicios"></a>
 				<br><br>
-		        <a href="Formularios/aeternitas_form_modificar_servicios.php"><input type="button" class="btn btn-primary" name="modificar_servicio" value="Modificar Servicio"></a>
+		        <a href="Formularios/modifica_servicios.php"><input type="button" class="btn btn-primary" name="modificar_servicio" value="Modificar Servicio"></a>
 		        <br><br>
-		        <a href="Formularios/aeternitas_form_eliminar_servicios.php"><input type="button" class="btn btn-primary" name="eliminar_servicio" value="Eliminar Servicio"></a>	
+		        <a href="Formularios/elimina_servicios.php"><input type="button" class="btn btn-primary" name="eliminar_servicio" value="Eliminar Servicio"></a>	
 				<br><br>
-				<a href="Formularios/visualiza_servicios.php"><input type="button" class="btn btn-primary" name="visualiza_servicio" value="Visualiza Servicios"></a>			
+				<a href="Formularios/visualiza_servicios.php"><input type="button" class="btn btn-primary" name="visualiza_servicios" value="Visualiza Servicios"></a>	
 
 			</td>
 		</tr>
-		<tr>
-			<td colspan="5" align="center">
-			<a href="PHP_Aeternitas/salir.php" target="_parent"><input type="button" class="btn btn-primary" name="cerrarsesion" value="Cerrar Sesion"></a>
-			</td>
-		</tr>
+
 
 	</table>
 	</div>

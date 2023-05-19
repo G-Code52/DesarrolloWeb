@@ -23,9 +23,11 @@
     if ($row) {
         $area = $row['area'];
         $nombre = $row['nombre'];
+        $apellido = $row['apellido'];
 
         $_SESSION['autenticado'] = true;
         $_SESSION['nombre'] = $nombre;
+        $_SESSION['apellido'] = $apellido;
         $_SESSION['id_trabajador'] = $u;
         $_SESSION['password'] = $p;
         $_SESSION['area'] = $area;

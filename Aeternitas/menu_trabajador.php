@@ -32,9 +32,7 @@
 		<tr>
 		    <td align="center" width="20%">
 		        <a href="Formularios/alta_contrato_trabajador.php"><input type="button" class="btn btn-primary" name="nuevo_contrato" value="Nuevo Contrato"></a>
-				<br><br>
-		        <a href="Formularios/modifica_contrato.php"><input type="button" class="btn btn-primary" name="modificar_contrato" value="Modificar Contrato"></a>
-		        
+				
 		    </td>
 		    <td align="center" width="20%">
 		        <a href="Formularios/alta_cliente.php"><input type="button" class="btn btn-primary" name="alta_cliente" value="Alta Cliente"></a>

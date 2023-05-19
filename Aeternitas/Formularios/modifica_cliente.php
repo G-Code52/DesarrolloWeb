@@ -22,7 +22,7 @@
 
         <div class="col-md-6 col-md-offset-3">
 		<FORM METHOD="POST" action="modifica_cliente.php">	
-		<label for="nombre"><font color="red" size="5" face="Verdana">*</font>ID a modificar:</label>
+		<label for="nombre">ID a modificar:</label>
 		<select name="id" class="form-control">
 		<?php
 			include "../PHP_Aeternitas/conex.php";
@@ -38,6 +38,7 @@
 		</form>
 		
             <form id="msform" name="fvalida" method="POST" action="../PHP_Aeternitas/modifica_cliente.php">
+                <h1>MODIFICA CLIENTE</h1>
                 <!-- progressbar -->
                 <ul id="progressbar">
                     <li class="active">Datos Personales</li>
