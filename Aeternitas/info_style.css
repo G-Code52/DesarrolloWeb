@@ -1,0 +1,90 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+img#logo{
+    margin: 5vh auto 0;
+    height: 50px;
+    width: 50px;
+}
+
+div#container{
+    width:100%;
+    height: 100vh;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: inset 4px 4px -2px rgba(0, 0, 0, 0.3);
+}
+
+.carousel, .carousel-inner > .item > table {
+    height: 50vh;
+
+}
+
+
+div#info{
+    margin: 10vh auto 0;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0 0 2 rgba(0, 0, 0, 0.7); 
+    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 2px solid grey;
+    width:300px;
+    height: 400px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+div#lista{
+    text-align:left;
+    color: #55A092;
+    margin: 2vh auto 0;
+    padding-left: 10px;
+
+}
+
+div#infoGeneral{
+    color: #777777;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    color: #55A092;
+    margin-top: 20px; /* agregar un margen superior */
+    align-self: flex-start; /* alinear en la parte superior */
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    
+}
+
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    color: #55A092;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #55A092;
+    font-size: 12px;
+    justify-content: left;
+    align-items: left;
+    text-align: left; 
+}
